@@ -118,11 +118,14 @@ function draw() {
         let resultP = createP('');
         resultP.style('font-size', '32pt');
         resultP.style('color', '#ff0000');
-        resultP.position(w,);
         if (result == 'tie') {
+            resultP.position(w,);
             resultP.html('It\'s a Tie!');
+            resultP.style('color', '#0000FF');
+        } else if (result == 'X') {
+            resultP.html('Game Over! You Lose!');
         } else {
-            resultP.html(`${result} wins!`);
+            resultP.html('You Win!');
         }
     }
 }
